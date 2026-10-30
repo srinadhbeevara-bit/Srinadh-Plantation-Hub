@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Srinadh Plantation Hub shares information about red sandalwood plantation projects, documentation, and site enquiries.">
+  <title>Srinadh Plantation Hub | Red Sandalwood Plantation</title>
+  <style>
+    :root {
+      --green: #174d35;
+      --green-light: #2e7650;
+      --cream: #f6f2e8;
+      --brown: #75472b;
+      --brown-dark: #382719;
+      --gold: #d5b36a;
+      --white: #fffdf8;
+    }
 
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #26352b;
+      background: var(--cream);
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .topbar {
+      background: var(--brown-dark);
+      color: #fff;
+      text-align: center;
+      padding: 9px 16px;
+      font-size: 0.9rem;
+    }
+    header {
+      background: var(--green);
+      color: white;
+      padding: 18px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .brand { font-weight: 800; font-size: 1.35rem; letter-spacing: .3px; }
+    .brand span { color: var(--gold); }
+    nav { display: flex; gap: 18px; flex-wrap: wrap; }
+    nav a { text-decoration: none; font-weight: 700; font-size: .95rem; }
+    nav a:hover { color: var(--gold); }
+    .hero {
+      min-height: 490px;
+      display: grid;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(17, 53, 36, .94) 0%, rgba(17, 53, 36, .77) 48%, rgba(17, 53, 36, .18) 100%),
+        url("https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1800&q=85") center/cover;
+      color: white;
+      padding: 70px 7%;
+    }
+    .hero-content { max-width: 690px; }
+    .eyebrow {
+      color: var(--gold);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: .85rem;
+    }
+    h1 { font-size: clamp(2.3rem, 5vw, 4.3rem); line-height: 1.08; margin: 14px 0 20px; }
+    .hero p { font-size: 1.12rem; max-width: 620px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 6px;
+      font-weight: 800;
+      text-decoration: none;
+      border: 2px solid var(--gold);
+    }
+    .btn-primary { background: var(--gold); color: var(--brown-dark); }
+    .btn-outline { color: white; }
+    .section { padding: 65px 7%; }
+    .section h2 { color: var(--green); font-size: clamp(1.8rem, 3vw, 2.6rem); margin: 0 0 14px; }
+    .intro { max-width: 780px; margin: 0 auto 30px; text-align: center; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+    .card {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(48, 39, 25, .08);
+      border: 1px solid #e7ddca;
+    }
+    .card img { width: 100%; height: 205px; object-fit: cover; display: block; }
+    .card-body { padding: 22px; }
+    .card h3 { color: var(--brown); margin: 0 0 8px; }
+    .notice {
+      background: #e8efe5;
+      border-left: 5px solid var(--green-light);
+      padding: 18px 20px;
+      border-radius: 6px;
+      margin-top: 28px;
+    }
+    .brown-section { background: var(--brown-dark); color: #fffaf0; }
+    .brown-section h2 { color: var(--gold); }
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 25px;
+    }
+    .step { border: 1px solid rgba(213,179,106,.45); padding: 20px; border-radius: 10px; }
+    .step strong { color: var(--gold); display: block; margin-bottom: 8px; }
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+      align-items: start;
+    }
+    .contact-box {
+      background: white;
+      padding: 28px;
+      border-radius: 12px;
+      border: 1px solid #e7ddca;
+    }
+    .contact-box h3 { color: var(--brown); margin-top: 0; }
+    .contact-link { color: var(--green); font-weight: 800; overflow-wrap: anywhere; }
+    footer {
+      background: var(--green);
+      color: white;
+      text-align: center;
+      padding: 25px 7%;
+      font-size: .9rem;
+    }
+    footer a { color: var(--gold); }
+    @media (max-width: 760px) {
+      header { align-items: flex-start; }
+      nav { gap: 12px; }
+      .hero { min-height: 520px; padding: 55px 6%; }
+      .cards, .steps, .contact-wrap { grid-template-columns: 1fr; }
+      .section { padding: 48px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">Red Sandalwood Plantation Information &amp; Enquiries</div>
+
+  <header>
+    <div class="brand">SRINADH <span>PLANTATION HUB</span></div>
+    <nav aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#information">Plantation Info</a>
+      <a href="#process">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Learn • Explore • Enquire</div>
+        <h1>Discover Red Sandalwood Plantation</h1>
+        <p>
+          Explore general information about red sandalwood, plantation project details,
+          documentation, and site enquiries—all in one place.
+        </p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#contact">Request Information</a>
+          <a class="btn btn-outline" href="#information">Explore Details</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="intro">
+        <h2>Welcome to Srinadh Plantation Hub</h2>
+        <p>
+          Our aim is to help visitors understand red sandalwood plantation projects
+          through clear information and direct enquiries. Ask for project-specific
+          details before making any decision.
+        </p>
+      </div>
+      <div class="cards" id="information">
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=900&q=80"
+               alt="Green forest and trees" loading="lazy">
+          <div class="card-body">
+            <h3>About Red Sandalwood</h3>
+            <p>Learn about the tree, its growing conditions, and why local rules and expert guidance matter.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=900&q=80"
+               alt="Agricultural land and green fields" loading="lazy">
+          <div class="card-body">
+            <h3>Plantation Project Details</h3>
+            <p>Request verified information about the project location, land records, ownership, terms, and maintenance arrangements.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=900&q=80"
+               alt="Natural woodland" loading="lazy">
+          <div class="card-body">
+            <h3>Documentation &amp; Guidance</h3>
+            <p>Ask about applicable permissions, documentation, harvesting and transport rules, and the process for a site visit.</p>
+          </div>
+        </article>
+      </div>
+      <div class="notice">
+        <strong>Important:</strong> This website provides general information and enquiry support.
+        It does not promise returns or guarantee future tree prices. Verify all claims, contracts,
+        land documents, and applicable legal requirements independently before paying or signing.
+      </div>
+    </section>
+
+    <section class="section brown-section" id="process">
+      <div class="intro">
+        <h2>How to Get Started</h2>
+        <p>Take time to understand the details and verify documents before making a decision.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <strong>01 — Ask</strong>
+          Contact us to request the available project information.
+        </div>
+        <div class="step">
+          <strong>02 — Verify</strong>
+          Review land documents, written terms, permissions, fees, and risks independently.
+        </div>
+        <div class="step">
+          <strong>03 — Visit</strong>
+          If appropriate, request a site visit and obtain written answers to your questions.
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="intro">
+        <h2>Contact Srinadh</h2>
+        <p>For red sandalwood plantation information or a project enquiry, get in touch.</p>
+      </div>
+      <div class="contact-wrap">
+        <div class="contact-box">
+          <h3>Contact Details</h3>
+          <p><strong>Name:</strong> Srinadh Beevara</p>
+          <p><strong>Phone:</strong> <a class="contact-link" href="tel:88886397191">88886397191</a></p>
+          <p><strong>Email:</strong> <a class="contact-link" href="mailto:srinadhbeevara@gmail.com">srinadhbeevara@gmail.com</a></p>
+          <p><strong>Association:</strong> Agent associated with Sai Properties &amp; Projects Limited.</p>
+          <p>Please confirm project terms and the company relationship directly before proceeding.</p>
+        </div>
+        <div class="contact-box">
+          <h3>Send an Email Enquiry</h3>
+          <p>Tap the button below to open your email app with an enquiry draft.</p>
+          <a class="btn btn-primary"
+             href="mailto:srinadhbeevara@gmail.com?subject=Red%20Sandalwood%20Plantation%20Enquiry&body=Hello%20Srinadh%2C%0A%0AI%20would%20like%20to%20know%20more%20about%20the%20red%20sandalwood%20plantation%20project.%0A%0APlease%20share%20the%20project%20location%2C%20documents%2C%20terms%2C%20costs%2C%20and%20applicable%20permissions.%0A%0AThank%20you.">
+            Email an Enquiry
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>Srinadh Plantation Hub</strong> | Red Sandalwood Plantation Information</p>
+    <p>© <span id="year"></span> Srinadh Plantation Hub. All rights reserved.</p>
+    <p>Independent information and enquiry page; not a guarantee of investment returns.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
